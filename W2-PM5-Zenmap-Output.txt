@@ -1,0 +1,176 @@
+NMAP OUTPUT
+
+Nmap scan report for networkwalks.com (192.232.216.135)
+Host is up (0.087s latency).
+Not shown: 985 closed tcp ports (reset)
+PORT     STATE    SERVICE    VERSION
+21/tcp   open     ftp        Pure-FTPd
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=RapidSSL TLS RSA CA G1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8430 90de a950 f2c3 a383 5789 79e1 10b4
+| SHA-1:   5266 37e5 4a6a 207d 3724 3c1d 5d7c f6fe 722f 7e86
+|_SHA-256: 98a4 d0f7 e26d fc04 0edb b733 a3cd 8d19 77a4 1267 e266 ae47 df04 9ac6 6c11 9d03
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| drwxr-xr-x    2 0          0                4096 Oct  2  2024 .
+|_drwxr-xr-x    2 0          0                4096 Oct  2  2024 ..
+22/tcp   open     ssh        OpenSSH 9.9 (protocol 2.0)
+25/tcp   filtered smtp
+26/tcp   open     smtp       Exim smtpd 4.100.1
+| smtp-commands: gator3068.hostgator.com Hello networkwalks.com [197.210.70.229], SIZE 52428800, LIMITS MAILMAX=50 RCPTMAX=50000, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, STARTTLS, HELP
+|_ Commands supported: AUTH STARTTLS HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+53/tcp   open     domain     ISC BIND 9.16.23 (RedHat Linux)
+| dns-nsid: 
+|_  bind.version: 9.16.23-RH
+80/tcp   open     http       Apache httpd
+|_http-title: Did not follow redirect to https://networkwalks.com/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+110/tcp  open     pop3       Dovecot pop3d
+|_pop3-capabilities: PIPELINING USER UIDL AUTH-RESP-CODE TOP CAPA RESP-CODES SASL(PLAIN LOGIN) STLS
+| ssl-cert: Subject: commonName=*.networkwalks.com
+| Subject Alternative Name: DNS:*.aurumme.com, DNS:*.networkwalks.com, DNS:aurumme.com, DNS:networkwalks.com, DNS:www.networkwalks.aurumme.com, DNS:www.zigi9.aurumme.com
+| Issuer: commonName=R12/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-22T02:07:30
+| Not valid after:  2025-12-21T02:07:29
+| MD5:     0543 0a9a 7b37 8c2b eed2 89dd 4659 f50e
+| SHA-1:   b754 4a4d 1932 6f19 7321 eba9 7a5d 5d73 4101 3ac3
+|_SHA-256: 4479 e7f4 7e4d e76b 482a ae13 f265 1c52 7c48 ec04 873d 1108 eb3f 260c 4a19 8efa
+|_ssl-date: TLS randomness does not represent time
+143/tcp  open     imap       Dovecot imapd
+|_imap-capabilities: have IDLE OK Pre-login STARTTLS IMAP4rev1 AUTH=PLAIN LITERAL+ post-login ID more SASL-IR ENABLE capabilities LOGIN-REFERRALS AUTH=LOGINA0001 listed
+| ssl-cert: Subject: commonName=*.networkwalks.com
+| Subject Alternative Name: DNS:*.aurumme.com, DNS:*.networkwalks.com, DNS:aurumme.com, DNS:networkwalks.com, DNS:www.networkwalks.aurumme.com, DNS:www.zigi9.aurumme.com
+| Issuer: commonName=R12/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-22T02:07:30
+| Not valid after:  2025-12-21T02:07:29
+| MD5:     0543 0a9a 7b37 8c2b eed2 89dd 4659 f50e
+| SHA-1:   b754 4a4d 1932 6f19 7321 eba9 7a5d 5d73 4101 3ac3
+|_SHA-256: 4479 e7f4 7e4d e76b 482a ae13 f265 1c52 7c48 ec04 873d 1108 eb3f 260c 4a19 8efa
+|_ssl-date: TLS randomness does not represent time
+443/tcp  open     ssl/http   Apache httpd
+|_http-favicon: Unknown favicon MD5: 9457B5AE2EE86552955331E60D41F550
+|_ssl-date: TLS randomness does not represent time
+|_http-generator: WordPress 7.1.4
+|_http-title: Networkwalks Academy
+| ssl-cert: Subject: commonName=networkwalks.com
+| Subject Alternative Name: DNS:*.networkwalks.com, DNS:networkwalks.com
+| Issuer: commonName=YR2/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-10-23T01:05:46
+| Not valid after:  2027-01-21T01:05:45
+| MD5:     a07d dce0 7c49 120a fd75 768b 967e 1a9a
+| SHA-1:   440c 6b87 2188 7fbe 6729 dcf3 c015 d90e 2cd4 f33a
+|_SHA-256: f5a9 8da6 a60a 08b4 f6cf b8b0 900d 74ec e42c a995 d208 2aa1 0d27 fb8d 915d d828
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache
+| http-robots.txt: 1 disallowed entry 
+|_/wp-content/uploads/wpforms/
+465/tcp  open     ssl/smtp   Exim smtpd 4.100.1
+| smtp-commands: gator3068.hostgator.com Hello networkwalks.com [197.210.70.229], SIZE 52428800, LIMITS MAILMAX=50 RCPTMAX=50000, 8BITMIME, PIPELINING, PIPECONNECT, AUTH PLAIN LOGIN, HELP
+|_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP
+587/tcp  filtered submission
+993/tcp  open     ssl/imap   Dovecot imapd
+|_ssl-date: TLS randomness does not represent time
+|_imap-capabilities: more have capabilities LITERAL+ listed post-login ID Pre-login OK AUTH=LOGINA0001 SASL-IR LOGIN-REFERRALS IMAP4rev1 AUTH=PLAIN IDLE ENABLE
+| ssl-cert: Subject: commonName=*.networkwalks.com
+| Subject Alternative Name: DNS:*.aurumme.com, DNS:*.networkwalks.com, DNS:aurumme.com, DNS:networkwalks.com, DNS:www.networkwalks.aurumme.com, DNS:www.zigi9.aurumme.com
+| Issuer: commonName=R12/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-22T02:07:30
+| Not valid after:  2025-12-21T02:07:29
+| MD5:     0543 0a9a 7b37 8c2b eed2 89dd 4659 f50e
+| SHA-1:   b754 4a4d 1932 6f19 7321 eba9 7a5d 5d73 4101 3ac3
+|_SHA-256: 4479 e7f4 7e4d e76b 482a ae13 f265 1c52 7c48 ec04 873d 1108 eb3f 260c 4a19 8efa
+995/tcp  open     ssl/pop3   Dovecot pop3d
+| ssl-cert: Subject: commonName=*.networkwalks.com
+| Subject Alternative Name: DNS:*.aurumme.com, DNS:*.networkwalks.com, DNS:aurumme.com, DNS:networkwalks.com, DNS:www.networkwalks.aurumme.com, DNS:www.zigi9.aurumme.com
+| Issuer: commonName=R12/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-22T02:07:30
+| Not valid after:  2025-12-21T02:07:29
+| MD5:     0543 0a9a 7b37 8c2b eed2 89dd 4659 f50e
+| SHA-1:   b754 4a4d 1932 6f19 7321 eba9 7a5d 5d73 4101 3ac3
+|_SHA-256: 4479 e7f4 7e4d e76b 482a ae13 f265 1c52 7c48 ec04 873d 1108 eb3f 260c 4a19 8efa
+|_pop3-capabilities: PIPELINING USER UIDL TOP CAPA RESP-CODES SASL(PLAIN LOGIN) AUTH-RESP-CODE
+|_ssl-date: TLS randomness does not represent time
+2222/tcp open     ssh        OpenSSH 9.9 (protocol 2.0)
+3306/tcp open     mysql      MySQL 5.7.44-48
+| ssl-cert: Subject: commonName=*.hostgator.com
+| Subject Alternative Name: DNS:*.hostgator.com, DNS:hostgator.com
+| Issuer: commonName=RapidSSL TLS RSA CA G1/organizationName=DigiCert Inc/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2026-08-07T00:00:00
+| Not valid after:  2027-02-21T23:59:59
+| MD5:     8430 90de a950 f2c3 a383 5789 79e1 10b4
+| SHA-1:   5266 37e5 4a6a 207d 3724 3c1d 5d7c f6fe 722f 7e86
+|_SHA-256: 98a4 d0f7 e26d fc04 0edb b733 a3cd 8d19 77a4 1267 e266 ae47 df04 9ac6 6c11 9d03
+|_ssl-date: TLS randomness does not represent time
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.44-48
+|   Thread ID: 5989775
+|   Capabilities flags: 65535
+|   Some Capabilities: IgnoreSpaceBeforeParenthesis, DontAllowDatabaseTableColumn, LongColumnFlag, InteractiveClient, Speaks41ProtocolOld, SupportsTransactions, IgnoreSigpipes, ODBCClient, SupportsLoadDataLocal, LongPassword, Speaks41ProtocolNew, FoundRows, SwitchToSSLAfterHandshake, SupportsCompression, Support41Auth, ConnectWithDatabase, SupportsMultipleResults, SupportsAuthPlugins, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: \x18}jV PrmX=4
+| *{V(p6
+| 6
+|_  Auth Plugin Name: mysql_native_password
+Device type: phone
+Running (JUST GUESSING): Apple iOS 15.X|16.X (86%)
+OS CPE: cpe:/o:apple:iphone_os:15 cpe:/o:apple:iphone_os:16
+Aggressive OS guesses: Apple iOS 15.0 - 16.1 (Darwin 21.1.0 - 22.1.0) (86%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.001 days (since Wed Nov 11 14:28:19 2026)
+Network Distance: 7 hops
+TCP Sequence Prediction: Difficulty=250 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: gator3068.hostgator.com; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   12.15 ms  172.20.10.1
+2   ...
+3   228.35 ms 10.169.131.249
+4   ... 5
+6   81.02 ms  10.202.1.162
+7   50.72 ms  192-232-216-135.unifiedlayer.com (192.232.216.135)
+
+NSE: Script Post-scanning.
+Initiating NSE at 14:29
+Completed NSE at 14:29, 0.00s elapsed
+Initiating NSE at 14:29
+Completed NSE at 14:29, 0.00s elapsed
+Initiating NSE at 14:29
+Completed NSE at 14:29, 0.00s elapsed
+Read data files from: /usr/share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 77.80 seconds
+           Raw packets sent: 1096 (50.536KB) | Rcvd: 1040 (42.971KB)
+
+
+PORTS/HOSTS
+

@@ -1,0 +1,7 @@
+Server:		100.100.100.100
+Address:	100.100.100.100#53
+
+Non-authoritative answer:
+Name:	networkwalks.com
+Address: 192.232.216.135
+
